@@ -1,0 +1,582 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: gray;
+}
+
+#calculator {
+    width: 450px;
+    height: 630px;
+    top: 5px;
+    position: absolute;
+    border: solid 10px black;
+    border-radius: 30px;
+    background-color: darkgray;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0px 150px black;
+}
+
+#screen {
+    width: 410px;
+    height: 120px;
+    border: inset 8px gray;
+    border-radius: 10px;
+    background-color: black;
+    /* box-shadow: 0 3px 20px aqua; */
+    top: 15px;
+    position: absolute;
+}
+#scr{
+    width: 400px;
+    height: 100px;
+    background-color: black;
+    border: solid 0px ;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: 50px;
+    color: black;
+}
+#l {
+    width: 444px;
+    border: solid 3px gray;
+    box-shadow: 0 2px 20px black;
+    position: absolute;
+    top: 160px;
+}
+
+#on {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 190px;
+    left: 20px;
+    background-image: url(onoff.png);
+    background-size: cover;
+    cursor: pointer;
+    border: solid 4px black;
+}
+#off {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 190px;
+    left: 20px;
+    background-image: url(onoff.png);
+    background-size: cover;
+    cursor: pointer;
+    border: solid 4px black;
+    display: none;
+}
+#on:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px black;
+}
+
+#end:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px black;
+}
+
+#del:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px black;
+}
+
+#min:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px black;
+}
+
+#pl:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px black;
+}
+
+#ang:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px black;
+}
+
+#baj:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px black;
+}
+
+#hav:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px black;
+}
+
+#ket:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px black;
+}
+
+#end {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 190px;
+    left: 135px;
+    background-color: white;
+    border: solid 4px black;
+    cursor: pointer;
+}
+
+#del {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 190px;
+    left: 250px;
+    background-color: white;
+    border: solid 4px black;
+    cursor: pointer;
+}
+
+#min {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 190px;
+    left: 355px;
+    background-color: white;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.min {
+    font-size: 100px;
+    position: absolute;
+    top: -37px;
+    cursor: pointer;
+}
+
+#pl {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 280px;
+    left: 355px;
+    background-color: white;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.pl {
+    font-size: 60px;
+    font-weight: 800;
+    position: absolute;
+    top: -17px;
+    cursor: pointer;
+}
+
+#ang {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 365px;
+    left: 355px;
+    background-color: white;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.ang {
+    font-size: 70px;
+    font-weight: 900;
+    position: absolute;
+    top: -10px;
+    cursor: pointer;
+}
+
+#baj {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 455px;
+    left: 355px;
+    background-color: white;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.baj {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -10px;
+    cursor: pointer;
+}
+
+#hav {
+    width: 170px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 540px;
+    left: 250px;
+    background-color: white;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hav {
+    font-size: 60px;
+    font-weight: 800;
+    position: absolute;
+    top: -17px;
+    cursor: pointer;
+}
+
+#zro {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 540px;
+    left: 135px;
+    background-color: gray;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.zro {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -8px;
+    cursor: pointer;
+}
+
+#ket {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 540px;
+    left: 20px;
+    background-color: white;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.ket {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -10px;
+    cursor: pointer;
+}
+
+.e {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.d {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    cursor: pointer;
+}
+
+#one {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 455px;
+    left: 20px;
+    background-color: gray;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.one {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -8px;
+    cursor: pointer;
+}
+
+#two {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 455px;
+    left: 135px;
+    background-color: gray;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.two {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -8px;
+    cursor: pointer;
+}
+
+#three {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 455px;
+    left: 250px;
+    background-color: gray;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.three {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -8px;
+    cursor: pointer;
+}
+
+#four {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 365px;
+    left: 20px;
+    background-color: gray;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.four {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -8px;
+    cursor: pointer;
+}
+
+#five {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 365px;
+    left: 135px;
+    background-color: gray;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.five {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -8px;
+    cursor: pointer;
+}
+
+#six {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 365px;
+    left: 250px;
+    background-color: gray;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.six {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -8px;
+    cursor: pointer;
+}
+
+#seven {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 280px;
+    left: 20px;
+    background-color: gray;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.seven {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -8px;
+    cursor: pointer;
+}
+
+#eight {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 280px;
+    left: 135px;
+    background-color: gray;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.eight {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -8px;
+    cursor: pointer;
+}
+
+#nine {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    border-radius: 10px;
+    top: 280px;
+    left: 250px;
+    background-color: gray;
+    border: solid 4px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nine {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -8px;
+    cursor: pointer;
+}
+
+#zro:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px gray;
+}
+
+#one:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px gray;
+}
+
+#two:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px gray;
+}
+
+#three:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px gray;
+}
+
+#four:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px gray;
+}
+
+#five:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px gray;
+}
+
+#six:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px gray;
+}
+
+#seven:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px gray;
+}
+
+#eight:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px gray;
+}
+
+/* #nine:hover {
+    background-color: gray;
+    box-shadow: 0 3px 20px gray;
+} */
